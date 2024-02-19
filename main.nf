@@ -8,7 +8,7 @@ process sayHello {
   script:
     """
     echo 'My $x World!'
-    ls /mnt
+    ls /data
     """
 }
 
