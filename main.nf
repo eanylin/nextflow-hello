@@ -25,9 +25,8 @@ process sayWorld {
 }
 
 workflow {
-  x = 'Hello'
-  y = 'World'
+  x = 'Bonjour'
+  y = 'Hello'
 
-  sayHello (x) | view
-  sayWorld (y) | view
+  sayHello (x) |  sayWorld (y) | view
 }
