@@ -28,5 +28,5 @@ workflow {
   x = 'Bonjour'
   y = 'Hello'
 
-  sayHello (x) |  sayWorld (y) | view
+  sayHello (x) | view
 }
