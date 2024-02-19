@@ -7,11 +7,27 @@ process sayHello {
     stdout
   script:
     """
-    echo '$x world!'
+    echo '$x!'
+    ls /mnt
+    """
+}
+
+process sayWorld {
+  input: 
+    val y
+  output:
+    stdout
+  script:
+    """
+    echo 'My $y world!'
     ls /mnt
     """
 }
 
 workflow {
-  Channel.of('Bonjour') | sayHello | view
+  x = 'Hello'
+  y = 'World'
+
+  sayHello (x) | view
+  sayWorld (y) | view
 }
