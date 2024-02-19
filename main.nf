@@ -7,26 +7,13 @@ process sayHello {
     stdout
   script:
     """
-    echo '$x!'
-    ls /mnt
-    """
-}
-
-process sayWorld {
-  input: 
-    val y
-  output:
-    stdout
-  script:
-    """
-    echo 'My $y world!'
+    echo 'My $x World!'
     ls /mnt
     """
 }
 
 workflow {
-  x = 'Bonjour'
-  y = 'Hello'
+  x = 'Hello'
 
   sayHello (x) | view
 }
