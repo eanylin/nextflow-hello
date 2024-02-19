@@ -7,11 +7,15 @@ process sayHello {
     stdout
   script:
     """
-    echo '$x world!'
-    ls /mnt
+    echo 'My $x World!'
+    ls /data
+    cat /data/test.txt
+    sleep 30
     """
 }
 
 workflow {
-  Channel.of('Bonjour') | sayHello | view
+  x = 'Hello'
+
+  sayHello (x) | view
 }
