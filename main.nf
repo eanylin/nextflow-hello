@@ -9,6 +9,8 @@ process sayHello {
     """
     echo 'My $x World!'
     ls /data
+    touch /data/test.txt
+    echo 'This is test.txt file on nfs shared drive' > /data/test.txt
     """
 }
 
