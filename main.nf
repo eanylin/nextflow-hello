@@ -8,9 +8,9 @@ process sayHello {
   script:
     """
     echo 'My $x World!'
-    #ls /data
-    #cat /data/test.txt
-    sleep 300
+    ls /data
+    cat /data/test.txt
+    sleep 30
     """
 }
 
