@@ -10,7 +10,6 @@ process sayHello {
     echo 'My $x World!'
     ls /data
     cat /data/test.txt
-    sleep 30
     """
 }
 
