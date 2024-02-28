@@ -9,8 +9,8 @@ process sayHello {
     """
     echo 'My $x World!'
     ls /data
-    cat /data/test.txt
-    sleep 60
+    # cat /data/test.txt
+    sleep 120
     """
 }
 
